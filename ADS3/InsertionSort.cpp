@@ -5,7 +5,8 @@ InsertionSort::InsertionSort()
 {
 	std::cout << "\nWelcome to InsertionSort \n\n1: Create list \n2: Random list \n\nI choose:";
 	bool keepLoop = true;
-	while (std::cin >> choice) {
+	while (keepLoop) {
+		std::cin >> choice;
 		switch (choice)
 		{
 		case 1:
