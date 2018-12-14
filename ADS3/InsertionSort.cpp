@@ -30,7 +30,6 @@ InsertionSort::InsertionSort()
 	insertionSort();
 	std::cout << "\nYour sorted list is: ";
 	printList();
-
 }
 
 
