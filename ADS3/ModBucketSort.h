@@ -13,7 +13,8 @@ private:
 	std::vector<int> bucketList;
 	void getRandomList(int elements);
 	void createUserList();
-	void printList();
+	void printUnsortedList();
+	void printSortedList();
 	void bucketSort();
 	void getBiggestNrInList();
 };

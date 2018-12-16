@@ -27,10 +27,10 @@ ModBucketSort::ModBucketSort()
 		}
 	}
 	std::cout << "\nYour list is: ";
-	printList();
+	printUnsortedList();
 	bucketSort();
 	std::cout << "\nYour sorted list is: ";
-	printList();
+	printSortedList();
 }
 
 
@@ -53,17 +53,28 @@ void ModBucketSort::createUserList()
 	}
 }
 
-void ModBucketSort::printList() {
-	for (auto v : incomList) {
-		std::cout << v << ", ";
+void ModBucketSort::printUnsortedList() {
+	for (auto element : incomList) {
+		std::cout << element << ", ";
 	}
+	std::cout << std::endl;
+}
+
+void ModBucketSort::printSortedList() {
+	for (int bucketNr = 0; bucketNr < bucketList.size(); ++bucketNr) {
+		for (int bucketValue = 0; bucketValue < bucketList[bucketNr]; ++bucketValue) {
+			std::cout << bucketNr << ", ";
+		}
+	}
+	std::cout << std::endl;
 }
 
 void ModBucketSort::bucketSort() {
 	getBiggestNrInList();
-	/*
-	Biggest nr is now found. Create vector of size k + 1 and then loop through incomList to +1 index in bucket vector for every value in incomList
-	*/
+	bucketList.resize(largestNbrInList + 1);
+	for (auto element : incomList) {
+		bucketList[element]++;
+	}
 }
 
 void ModBucketSort::getBiggestNrInList() {
