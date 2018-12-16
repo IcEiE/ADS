@@ -151,12 +151,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="ModBucketSort.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ADS3.cpp" />
+    <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="ModBucketSort.cpp" />
     <ClCompile Include="pch.cpp">

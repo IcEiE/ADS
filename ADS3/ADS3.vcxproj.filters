@@ -16,6 +16,9 @@
     <Filter Include="Source Files\SortAlg">
       <UniqueIdentifier>{506be755-8ea7-48c2-a89e-ec05df5f139e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Trees">
+      <UniqueIdentifier>{7c355889-c6ea-4586-92b4-4218cf9c69a6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -25,6 +28,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ModBucketSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -40,6 +46,9 @@
     </ClCompile>
     <ClCompile Include="ModBucketSort.cpp">
       <Filter>Source Files\SortAlg</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTree.cpp">
+      <Filter>Source Files\Trees</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
