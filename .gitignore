@@ -234,3 +234,5 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+/ADS3/AVLTree.h
+/ADS3/AVLTree.cpp
