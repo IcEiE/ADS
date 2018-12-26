@@ -7,5 +7,6 @@ public:
 	~BinarySearchTree();
 private:
 	struct node *root;
+	int choice;
 };
 
