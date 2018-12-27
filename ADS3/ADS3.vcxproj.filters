@@ -39,6 +39,9 @@
     <ClInclude Include="AdversaryGraph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -58,6 +61,9 @@
     </ClCompile>
     <ClCompile Include="AdversaryGraph.cpp">
       <Filter>Source Files\Lab</Filter>
+    </ClCompile>
+    <ClCompile Include="BFS.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

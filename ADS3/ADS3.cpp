@@ -10,6 +10,7 @@ int main()
 	std::cout << "1: Insertion Sort\n";
 	std::cout << "2: Modified Bucket Sort\n";
 	std::cout << "3: Binary Tree\n";
+	std::cout << "5: Adversary Graph with BFS\n";
 	std::cout << "\nI choose: ";
 	int choice;
 	std::cin >> choice;
@@ -24,6 +25,9 @@ int main()
 	else if (choice == 3) {
 		BinaryTree *bt = new BinaryTree();
 		delete bt;
+	}
+	else if (choice == 5) {
+		
 	}
 	std::cout << "\n\n\n";
 }
