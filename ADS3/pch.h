@@ -13,5 +13,6 @@
 #include <list>
 #include <vector>
 #include <numeric>
+#include <queue>
 
 #endif //PCH_H
