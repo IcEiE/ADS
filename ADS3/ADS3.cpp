@@ -3,6 +3,7 @@
 #include "InsertionSort.h"
 #include "ModBucketSort.h"
 #include "BinaryTree.h"
+#include "AdversaryGraph.h"
 
 int main()
 {
@@ -27,7 +28,30 @@ int main()
 		delete bt;
 	}
 	else if (choice == 5) {
-		
+		AdversaryGraph *g = new AdversaryGraph(7);
+		g->addEdge(0, 1);
+		g->addEdge(0, 2);
+		g->addEdge(1, 3);
+		g->addEdge(1, 4);
+		g->addEdge(1, 5);
+		g->addEdge(3, 4);
+		g->addEdge(2, 5);
+		g->addEdge(2, 6);
+
+		g->addEdge(1, 0);
+		g->addEdge(2, 0);
+		g->addEdge(3, 1);
+		g->addEdge(4, 1);
+		g->addEdge(5, 1);
+		g->addEdge(4, 3);
+		g->addEdge(5, 2);
+		g->addEdge(6, 2);
+		std::list<int> friends = g->findAllFriends(0);
+		std::cout << "Friends: ";
+		for (auto f : friends) {
+			std::cout << f << ", ";
+		}
+		delete g;
 	}
 	std::cout << "\n\n\n";
 }

@@ -14,5 +14,6 @@
 #include <vector>
 #include <numeric>
 #include <queue>
+#include <algorithm>
 
 #endif //PCH_H

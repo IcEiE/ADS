@@ -4,7 +4,7 @@
 
 AdversaryGraph::AdversaryGraph(int V)
 {
-	this->V = V;
+	this->numberOfVerticis = V;
 	adjNodeList = new std::list<int>[V];
 }
 
@@ -25,11 +25,11 @@ bool AdversaryGraph::isEdge(int v1, int v2) {
 }
 
 int AdversaryGraph::getNumbOfNodes() {
-	return V;
+	return numberOfVerticis;
 }
 
 void AdversaryGraph::printGraph() {
-	for (int v = 0; v < V; ++v)
+	for (int v = 0; v < numberOfVerticis; ++v)
 	{
 		std::cout << "\n Adjacency list of vertex "
 			<< v << "\n head ";
@@ -43,7 +43,7 @@ void AdversaryGraph::printGraph() {
 	}
 }
 
-//Get nodes that v is poiting to. 
+//Get nodes that v is pointing to. 
 std::list<int> AdversaryGraph::successors(int v) {
 
 	std::list <int> v_sucessors;
@@ -56,29 +56,37 @@ std::list<int> AdversaryGraph::successors(int v) {
 
 
 std::list<int> AdversaryGraph::findAllFriends(int startVertex) {
-	std::list<int> *foundNodes = new std::list<int>;
-	std::list<int> *friends = new std::list<int>;
+	bool *visited = new bool[numberOfVerticis];
+	for (int i = 0; i < numberOfVerticis; i++) {
+		visited[i] = false;
+	}
+	std::list<int> friends;
 	std::queue<int> *openList = new std::queue<int>;
 
 	openList->push(startVertex);
+	visited[startVertex] = true;
 	int nextInQueue;
-	int layer = 0;
+	int depth = 0;
+	openList->push(-1);
+
 	while (!openList->empty()) {
 		nextInQueue = openList->front();
 		openList->pop();
-		foundNodes->push_back(nextInQueue);
-		if (layer < 0 && layer % 2 == 0) friends->push_back(nextInQueue);
-		for (auto foe : adjNodeList[nextInQueue]) {
-			//This can only occur if foe is not already in found nodes.
-			openList->push(foe);
+		if (nextInQueue == -1 && openList->size() > 0) {
+			++depth;
+			openList->push(-1);
+		}
+		else if (nextInQueue != -1) {
+
+			if (depth > 0 && depth % 2 == 0) friends.push_back(nextInQueue);
+
+			for (auto foe : adjNodeList[nextInQueue]) {
+				if (!visited[foe]) {
+					openList->push(foe);
+					visited[foe] = true;
+				}
+			}
 		}
 	}
-
-	//while (!openList->empty()) {
-	//	++layer;
-	//	nextInQueue = openList->front();
-	//	openList->pop();
-	//	foundNodes->push_back(nextInQueue);
-	//	for (auto adversity : )
-	//}
+	return friends;
 }

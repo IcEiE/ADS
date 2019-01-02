@@ -11,6 +11,6 @@ public:
 	std::list<int> successors(int vertex);
 	std::list<int> findAllFriends(int v);
 private:
-	int V;
+	int numberOfVerticis;
 	std::list<int> *adjNodeList;
 };
