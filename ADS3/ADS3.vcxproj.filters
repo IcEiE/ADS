@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Trees">
       <UniqueIdentifier>{7c355889-c6ea-4586-92b4-4218cf9c69a6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Lab">
+      <UniqueIdentifier>{e8b0daae-31b9-4434-91b7-779ad25b4d77}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -31,6 +34,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BinaryTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdversaryGraph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -49,6 +55,9 @@
     </ClCompile>
     <ClCompile Include="BinaryTree.cpp">
       <Filter>Source Files\Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="AdversaryGraph.cpp">
+      <Filter>Source Files\Lab</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
