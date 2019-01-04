@@ -9,7 +9,6 @@ public:
 	int getNumbOfNodes();
 	void printGraph();
 	std::list<int> successors(int vertex);
-	std::list<int> findAllFriends(int v);
 private:
 	int numberOfVerticis;
 	std::list<int> *adjNodeList;
